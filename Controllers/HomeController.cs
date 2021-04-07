@@ -30,6 +30,8 @@ namespace AuthBasics.Controllers
                 new Claim("Grandma.Says", "Very nice boi."),
             };
 
+            var grandmaIdentity = new ClaimsIdentity(grandmaClaims, "Grandma Identity");
+
             return RedirectToAction("Index");
         }
     }
