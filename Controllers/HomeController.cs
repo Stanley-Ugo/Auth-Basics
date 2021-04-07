@@ -32,11 +32,12 @@ namespace AuthBasics.Controllers
 
             var licenseClaims = new List<Claim>()
             {
-                new Claim(ClaimTypes.Email, "bob@fmail.com"),
+                new Claim(ClaimTypes.Email, "Bob K Foo"),
                 new Claim("DrivingLicense", "A+."),
             };
 
             var grandmaIdentity = new ClaimsIdentity(grandmaClaims, "Grandma Identity");
+            var licenseIdentity = new ClaimsIdentity(licenseClaims, "Government");
 
             var userPrincipal = new ClaimsPrincipal(new[] { grandmaIdentity });
 
