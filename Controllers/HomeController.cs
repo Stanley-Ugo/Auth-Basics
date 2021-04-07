@@ -32,6 +32,8 @@ namespace AuthBasics.Controllers
 
             var grandmaIdentity = new ClaimsIdentity(grandmaClaims, "Grandma Identity");
 
+            var userPrincipal = new ClaimsPrincipal(new[] { grandmaIdentity });
+
             return RedirectToAction("Index");
         }
     }
