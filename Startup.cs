@@ -36,6 +36,10 @@ namespace AuthBasics
 
             app.UseRouting();
 
+            //who are you
+            app.UseAuthentication();
+
+            //Are You Allowed to go here?
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
