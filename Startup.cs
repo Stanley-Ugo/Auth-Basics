@@ -41,6 +41,8 @@ namespace AuthBasics
                 //    policyBuilder.RequireClaim(ClaimTypes.DateOfBirth);
                 //});
 
+                config.AddPolicy("Admin", policyBuilder => policyBuilder.RequireClaim(ClaimTypes.Role, "Admin"));
+
                 config.AddPolicy("Claim.DOB", policyBuilder =>
                 {
                     policyBuilder.RequireCustomClaim(ClaimTypes.DateOfBirth);
