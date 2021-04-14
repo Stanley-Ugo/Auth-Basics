@@ -41,7 +41,7 @@ namespace AuthBasics
                 //    policyBuilder.RequireClaim(ClaimTypes.DateOfBirth);
                 //});
 
-                config.AddPolicy("Claim.COB", policyBuilder =>
+                config.AddPolicy("Claim.DOB", policyBuilder =>
                 {
                     policyBuilder.RequireCustomClaim(ClaimTypes.DateOfBirth);
                 });
