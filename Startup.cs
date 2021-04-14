@@ -26,7 +26,10 @@ namespace AuthBasics
 
             services.AddAuthorization(config => {
                 var defaultAuthBuilder = new AuthorizationPolicyBuilder();
-                config.DefaultPolicy = 
+
+                var defaultAuthPolicy = defaultAuthBuilder.Build();
+
+                config.DefaultPolicy = defaultAuthBuilder;
             });
 
             services.AddControllersWithViews();
