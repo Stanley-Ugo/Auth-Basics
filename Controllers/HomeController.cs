@@ -22,6 +22,13 @@ namespace AuthBasics.Controllers
             return View();
         }
 
+        [Authorize(Policy = "Claim.DOB")]
+        public IActionResult SecretPolicy()
+        {
+            return View("Secret");
+        }
+
+
         public IActionResult Authenticate()
         {
             var grandmaClaims = new List<Claim>()
