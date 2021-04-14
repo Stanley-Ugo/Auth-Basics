@@ -24,7 +24,7 @@ namespace AuthBasics
                 });
 
             services.AddAuthorization(config => { 
-
+                config.DefaultPolicy = 
             });
 
             services.AddControllersWithViews();
