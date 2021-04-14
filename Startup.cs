@@ -28,8 +28,8 @@ namespace AuthBasics
                 var defaultAuthBuilder = new AuthorizationPolicyBuilder();
 
                 var defaultAuthPolicy = defaultAuthBuilder
-                .RequireAuthenticatedUser();
-                .Build();
+                    .RequireAuthenticatedUser()
+                    .Build();
 
                 config.DefaultPolicy = defaultAuthPolicy;
             });
