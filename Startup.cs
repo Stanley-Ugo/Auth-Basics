@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -23,7 +24,8 @@ namespace AuthBasics
                     config.LoginPath = "/Home/Authenticate";
                 });
 
-            services.AddAuthorization(config => { 
+            services.AddAuthorization(config => {
+                var defaultAuthBuilder = new AuthorizationPolicyBuilder();
                 config.DefaultPolicy = 
             });
 
