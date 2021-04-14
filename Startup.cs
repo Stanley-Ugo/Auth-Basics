@@ -23,6 +23,10 @@ namespace AuthBasics
                     config.LoginPath = "/Home/Authenticate";
                 });
 
+            services.AddAuthorization(config => { 
+
+            });
+
             services.AddControllersWithViews();
         }
 
