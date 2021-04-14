@@ -43,7 +43,7 @@ namespace AuthBasics
 
                 config.AddPolicy("Claim.COB", policyBuilder =>
                 {
-                    policyBuilder.AddRequirements(new CustomRequireClaim(ClaimTypes.DateOfBirth));
+                    policyBuilder.RequireCustomClaim(ClaimTypes.DateOfBirth);
                 });
 
             });
