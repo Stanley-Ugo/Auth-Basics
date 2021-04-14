@@ -28,7 +28,7 @@ namespace AuthBasics.Controllers
             return View("Secret");
         }
 
-        [Authorize(Policy = "Claim.DOB")]
+        [Authorize(Roles = "Admin")]
         public IActionResult SecretRole()
         {
             return View("Secret");
