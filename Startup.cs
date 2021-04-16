@@ -58,6 +58,7 @@ namespace AuthBasics
                 .AddRazorPagesOptions( config => {
                     config.Conventions.AuthorizePage("/Razor/Secured");
                     config.Conventions.AuthorizePage("/Razor/Policy", "Admin");
+                    config.Conventions.AuthorizeFolder("RazorSecured");
                 });
         }
 

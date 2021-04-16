@@ -32,3 +32,4 @@ C:\Projects\AuthBasics\obj\Debug\netcoreapp3.1\AuthBasics.genruntimeconfig.cache
 C:\Projects\AuthBasics\obj\Debug\netcoreapp3.1\AuthBasics.csproj.CopyComplete
 C:\Projects\AuthBasics\obj\Debug\netcoreapp3.1\Razor\Pages\Razor\Index.cshtml.g.cs
 C:\Projects\AuthBasics\obj\Debug\netcoreapp3.1\Razor\Pages\Razor\Secured.cshtml.g.cs
+C:\Projects\AuthBasics\obj\Debug\netcoreapp3.1\Razor\Pages\Razor\Policy.cshtml.g.cs
