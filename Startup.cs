@@ -76,6 +76,7 @@ namespace AuthBasics
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapDefaultControllerRoute();
+                endpoints.MapRazorPages();
             });
         }
     }
