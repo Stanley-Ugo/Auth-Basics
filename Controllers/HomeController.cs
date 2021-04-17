@@ -76,6 +76,11 @@ namespace AuthBasics.Controllers
 
             var authResult = await _authorizationService.AuthorizeAsync(User, customPolicy);
 
+            if (authResult.Succeeded)
+            {
+
+            }
+
             return View("Index");
         } 
     }
