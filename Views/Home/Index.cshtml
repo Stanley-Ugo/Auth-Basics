@@ -3,3 +3,8 @@
 
 @using Microsoft.AspNetCore.Authorization
 @inject IAuthorizationService authorizationService
+
+@if((await authorizationService.AuthorizeAsync(User, "Claim.DoB")).Succeeded)
+{
+    <h1>User Has The  Date Of Birth CLims</h1>
+}
