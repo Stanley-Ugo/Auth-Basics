@@ -68,8 +68,12 @@ namespace AuthBasics.Controllers
             return RedirectToAction("Index");
         }
 
-        public Task<IActionResult> DoStuff()
+        public async Task<IActionResult> DoStuff()
         {
+            //we are doing stuff here
+            var builder = new AuthorizationPolicyBuilder("Schema");
+            var customPolicy = builder.RequireClaim("Hello").Build();
+
             return View("Index");
         } 
     }
