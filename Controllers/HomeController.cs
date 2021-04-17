@@ -74,6 +74,8 @@ namespace AuthBasics.Controllers
             var builder = new AuthorizationPolicyBuilder("Schema");
             var customPolicy = builder.RequireClaim("Hello").Build();
 
+            var authResult = await _authorizationService.AuthorizeAsync(User, customPolicy);
+
             return View("Index");
         } 
     }
