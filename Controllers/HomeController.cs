@@ -11,12 +11,6 @@ namespace AuthBasics.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IAuthorizationService _authorizationService;
-
-        public HomeController(IAuthorizationService authorizationServie)
-        {
-            _authorizationService = authorizationServie;
-        }
         public IActionResult Index()
         {
             return View();
@@ -68,13 +62,13 @@ namespace AuthBasics.Controllers
             return RedirectToAction("Index");
         }
 
-        public async Task<IActionResult> DoStuff()
+        public async Task<IActionResult> DoStuff([FromServices] IAuthorizationService authorizationService)
         {
             //we are doing stuff here
             var builder = new AuthorizationPolicyBuilder("Schema");
             var customPolicy = builder.RequireClaim("Hello").Build();
 
-            var authResult = await _authorizationService.AuthorizeAsync(User, customPolicy);
+            var authResult = await authorizationService.AuthorizeAsync(User, customPolicy);
 
             if (authResult.Succeeded)
             {
