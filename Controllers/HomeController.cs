@@ -67,5 +67,10 @@ namespace AuthBasics.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public Task<IActionResult> DoStuff()
+        {
+            return View("Index");
+        } 
     }
 }
