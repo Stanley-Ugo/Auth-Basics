@@ -59,6 +59,7 @@ namespace AuthBasics
                     config.Conventions.AuthorizePage("/Razor/Secured");
                     config.Conventions.AuthorizePage("/Razor/Policy", "Admin");
                     config.Conventions.AuthorizeFolder("RazorSecured");
+                    config.Conventions.AllowAnonymousToPage("/RazorSecured/Anon");
                 });
         }
 
