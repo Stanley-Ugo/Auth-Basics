@@ -1,10 +1,22 @@
 ﻿
 <h1>Home Page!!!</h1>
 
+@*Simple Access Quick Checks*@
+@if (User.Identity.IsAuthenticated)
+{
+    <h1>User IS Authenticated</h1>
+}
+else
+{
+    <h1>User In Not Authenticaed!!!</h1>
+}
+
+
+@*Big Guns reusable function*@
 @using Microsoft.AspNetCore.Authorization
 @inject IAuthorizationService authorizationService
 
 @if((await authorizationService.AuthorizeAsync(User, "Claim.DoB")).Succeeded)
 {
-    <h1>User Has The  Date Of Birth CLims</h1>
+    <h1>User Has The  Date Of Birth CLaims</h1>
 }
