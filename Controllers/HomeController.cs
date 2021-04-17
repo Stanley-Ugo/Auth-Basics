@@ -11,6 +11,12 @@ namespace AuthBasics.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IAuthorizationService _authorizationService;
+
+        public HomeController(IAuthorizationService authorizationServie)
+        {
+            _authorizationService = authorizationServie;
+        }
         public IActionResult Index()
         {
             return View();
