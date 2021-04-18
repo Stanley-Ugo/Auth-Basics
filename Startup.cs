@@ -54,11 +54,14 @@ namespace AuthBasics
             services.AddScoped<IAuthorizationHandler, CustomRequireClaimHandler>();
 
             services.AddControllersWithViews(config => {
+
                 var defaultAuthBuilder = new AuthorizationPolicyBuilder();
                 var defaultAuthPolicy = defaultAuthBuilder
                     .RequireAuthenticatedUser()
                     .RequireClaim(ClaimTypes.DateOfBirth)
                     .Build();
+
+                //global Authorization Filter
                 config.Filters.Add(new AuthorizeFilter(defaultAuthPolicy));
             });
 
