@@ -52,7 +52,9 @@ namespace AuthBasics
 
             services.AddScoped<IAuthorizationHandler, CustomRequireClaimHandler>();
 
-            services.AddControllersWithViews();
+            services.AddControllersWithViews(config => { 
+
+            });
 
             services.AddRazorPages()
                 .AddRazorPagesOptions( config => {
