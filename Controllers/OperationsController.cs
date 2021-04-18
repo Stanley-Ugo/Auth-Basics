@@ -18,20 +18,17 @@ namespace AuthBasics.Controllers
         }
         public async Task<IActionResult> Open()
         {
-            var requirement = new OperationAuthorizationRequirement()
-            {
-                Name = CookieJarOperations.ComeNear
-            };
+            var cookieJar = new CookieJar(); //get cookie from db.
 
-            _authorizationService.AuthorizeAsync(User,null, requirement);
+            await _authorizationService.AuthorizeAsync(User, cookieJar, CookieJarAuthOperations.Open);
 
             return View();
         }
     }
 
-    public class CookieJarAuthorizationHandler : AuthorizationHandler<OperationAuthorizationRequirement>
+    public class CookieJarAuthorizationHandler : AuthorizationHandler<OperationAuthorizationRequirement, CookieJar>
     {
-        protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, OperationAuthorizationRequirement requirement)
+        protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, OperationAuthorizationRequirement requirement, CookieJar cookieJar)
         {
             if (requirement.Name == CookieJarOperations.Open)
             {
@@ -52,11 +49,24 @@ namespace AuthBasics.Controllers
         }
     }
 
+    public static class CookieJarAuthOperations
+    {
+        public static OperationAuthorizationRequirement Open = new OperationAuthorizationRequirement
+        {
+            Name = CookieJarOperations.Open
+        };
+    }
+
     public static class CookieJarOperations
     {
         public static string Open = "Open";
         public static string TakeCookie = "Take Cookie";
         public static string ComeNear = "COmeNear";
         public static string Look = "Look";
+    }
+
+    public class CookieJar
+    {
+        public string Name { get; set; }
     }
 }

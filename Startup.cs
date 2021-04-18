@@ -62,7 +62,7 @@ namespace AuthBasics
                     .Build();
 
                 //global Authorization Filter
-                config.Filters.Add(new AuthorizeFilter(defaultAuthPolicy));
+                //config.Filters.Add(new AuthorizeFilter(defaultAuthPolicy));
             });
 
             services.AddRazorPages()
