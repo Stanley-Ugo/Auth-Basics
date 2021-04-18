@@ -20,4 +20,12 @@ namespace AuthBasics.Controllers
             throw new NotImplementedException();
         }
     }
+
+    public static class CookieJarOperations
+    {
+        public static string Open = "Open";
+        public static string TakeCookie = "Take Cookie";
+        public static string ComeNear = "COmeNear";
+        public static string Look = "Look";
+    }
 }
