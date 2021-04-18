@@ -18,6 +18,13 @@ namespace AuthBasics.Controllers
         }
         public async Task<IActionResult> Open()
         {
+            var requirement = new OperationAuthorizationRequirement()
+            {
+                Name = CookieJarOperations.ComeNear
+            };
+
+            _authorizationService.AuthorizeAsync(User,null, requirement);
+
             return View();
         }
     }
@@ -26,7 +33,22 @@ namespace AuthBasics.Controllers
     {
         protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, OperationAuthorizationRequirement requirement)
         {
-            throw new NotImplementedException();
+            if (requirement.Name == CookieJarOperations.Open)
+            {
+                if (context.User.Identity.IsAuthenticated)
+                {
+                    context.Succeed(requirement);
+                }
+            }
+            else if (requirement.Name == CookieJarOperations.ComeNear)
+            {
+                if (context.User.HasClaim("Friend", "Good"))
+                {
+                    context.Succeed(requirement);
+                }
+            }
+
+            return Task.CompletedTask;
         }
     }
 
