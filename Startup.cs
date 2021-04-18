@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
@@ -52,8 +53,13 @@ namespace AuthBasics
 
             services.AddScoped<IAuthorizationHandler, CustomRequireClaimHandler>();
 
-            services.AddControllersWithViews(config => { 
-
+            services.AddControllersWithViews(config => {
+                var defaultAuthBuilder = new AuthorizationPolicyBuilder();
+                var defaultAuthPolicy = defaultAuthBuilder
+                    .RequireAuthenticatedUser()
+                    .RequireClaim(ClaimTypes.DateOfBirth)
+                    .Build();
+                config.Filters.Add(new AuthorizeFilter(defaultAuthPolicy));
             });
 
             services.AddRazorPages()
