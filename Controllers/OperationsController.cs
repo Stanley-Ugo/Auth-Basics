@@ -10,7 +10,16 @@ namespace AuthBasics.Controllers
 {
     public class OperationsController : Controller
     {
+        private readonly IAuthorizationService _authorizationService;
 
+        public OperationsController(IAuthorizationService authorizationService)
+        {
+            _authorizationService = authorizationService;
+        }
+        public async Task<IActionResult> Open()
+        {
+            return View();
+        }
     }
 
     public class CookieJarAuthorizationHandler : AuthorizationHandler<OperationAuthorizationRequirement>
