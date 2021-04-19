@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Authorization;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace AuthBasics.CustomPolicyProvider
 {
-    public class CustomAuthorizationPolicyProvider
+    public class CustomAuthorizationPolicyProvider : IAuthorizationPolicyProvider
     {
 
     }
