@@ -7,25 +7,20 @@ using System.Threading.Tasks;
 
 namespace AuthBasics.CustomPolicyProvider
 {
+    public static class DynamicPolicies
+    {
+        public const string SecurityLevel = "SecurityLevel";
+        public const string Rank = "Rank";
+    }
     public class CustomAuthorizationPolicyProvider : DefaultAuthorizationPolicyProvider
     {
         public CustomAuthorizationPolicyProvider(IOptions<AuthorizationOptions> options) : base(options)
         {
 
         }
-        public Task<AuthorizationPolicy> GetDefaultPolicyAsync()
+        public override Task<AuthorizationPolicy> GetPolicyAsync(string policyName)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<AuthorizationPolicy> GetFallbackPolicyAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<AuthorizationPolicy> GetPolicyAsync(string policyName)
-        {
-            throw new NotImplementedException();
+            return base.GetPolicyAsync(policyName);
         }
     }
 }
