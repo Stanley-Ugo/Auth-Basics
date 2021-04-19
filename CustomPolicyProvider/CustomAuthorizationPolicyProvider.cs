@@ -57,7 +57,12 @@ namespace AuthBasics.CustomPolicyProvider
         protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, SecurityLevelRequirements requirement)
         {
             var claimValue = Convert.ToInt32(context.User.Claims.FirstOrDefault(x => x.Type == DynamicPolicies.SecurityLevel) ? .Value ?? "0");
-            context.Succeed(requirement);
+
+            if (requirement.Level >= claimValue)
+            {
+                context.Succeed(requirement);
+            }
+
         }
     }
     public class CustomAuthorizationPolicyProvider : DefaultAuthorizationPolicyProvider
