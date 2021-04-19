@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authentication;
+﻿using AuthBasics.CustomPolicyProvider;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -34,8 +35,14 @@ namespace AuthBasics.Controllers
             return View("Secret");
         }
 
-        [Authorize(Roles = "Admin")]
+        [SecurityLevel(5)]
         public IActionResult SecretLevel()
+        {
+            return View("Secret");
+        }
+
+        [SecurityLevel(10)]
+        public IActionResult SecretHigherLevel()
         {
             return View("Secret");
         }
@@ -50,6 +57,7 @@ namespace AuthBasics.Controllers
                 new Claim(ClaimTypes.Email, "bob@fmail.com"),
                 new Claim(ClaimTypes.DateOfBirth, "11/11/2000"),
                 new Claim(ClaimTypes.Role, "Admin"),
+                new Claim(DynamicPolicies.SecurityLevel, "7"),
                 new Claim("Grandma.Says", "Very nice boi."),
             };
 
