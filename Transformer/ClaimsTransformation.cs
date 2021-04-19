@@ -2,12 +2,16 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace AuthBasics.Transformer
 {
     public class ClaimsTransformation : IClaimsTransformation
     {
-
+        public Task<ClaimsPrincipal> TransformAsync(ClaimsPrincipal principal)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
