@@ -77,7 +77,7 @@ namespace AuthBasics.CustomPolicyProvider
             {
                 if (policyName.StartsWith(customPolicy))
                 {
-                    var policy = new AuthorizationPolicyBuilder().Build();
+                    var policy = DynamicAuthorizationPolicyFactory.Create(policyName);
 
                     return Task.FromResult(policy);
                 }
