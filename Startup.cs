@@ -54,6 +54,7 @@ namespace AuthBasics
 
             });
 
+            services.AddSingleton<IAuthorizationPolicyProvider, CustomAuthorizationPolicyProvider>();
             services.AddScoped<IAuthorizationHandler, CustomRequireClaimHandler>();
             services.AddScoped<IAuthorizationHandler, CookieJarAuthorizationHandler>();
             services.AddScoped<IClaimsTransformation, ClaimsTransformation>();
