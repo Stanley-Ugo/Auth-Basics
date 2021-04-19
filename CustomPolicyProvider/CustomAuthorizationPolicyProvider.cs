@@ -62,7 +62,7 @@ namespace AuthBasics.CustomPolicyProvider
             {
                 context.Succeed(requirement);
             }
-
+            return Task.CompletedTask;
         }
     }
     public class CustomAuthorizationPolicyProvider : DefaultAuthorizationPolicyProvider
