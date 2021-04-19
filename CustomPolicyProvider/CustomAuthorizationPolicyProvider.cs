@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,8 +7,25 @@ using System.Threading.Tasks;
 
 namespace AuthBasics.CustomPolicyProvider
 {
-    public class CustomAuthorizationPolicyProvider : IAuthorizationPolicyProvider
+    public class CustomAuthorizationPolicyProvider : DefaultAuthorizationPolicyProvider
     {
+        public CustomAuthorizationPolicyProvider(IOptions<AuthorizationOptions> options) : base(options)
+        {
 
+        }
+        public Task<AuthorizationPolicy> GetDefaultPolicyAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<AuthorizationPolicy> GetFallbackPolicyAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<AuthorizationPolicy> GetPolicyAsync(string policyName)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
