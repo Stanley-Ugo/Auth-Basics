@@ -1,4 +1,5 @@
 using AuthBasics.AuthorizationRequirements;
+using AuthBasics.Controllers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -52,6 +53,7 @@ namespace AuthBasics
             });
 
             services.AddScoped<IAuthorizationHandler, CustomRequireClaimHandler>();
+            services.AddScoped<IAuthorizationHandler, CookieJarAuthorizationHandler>();
 
             services.AddControllersWithViews(config => {
 
