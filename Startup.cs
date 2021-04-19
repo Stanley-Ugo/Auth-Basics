@@ -1,5 +1,6 @@
 using AuthBasics.AuthorizationRequirements;
 using AuthBasics.Controllers;
+using AuthBasics.CustomPolicyProvider;
 using AuthBasics.Transformer;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
