@@ -34,6 +34,12 @@ namespace AuthBasics.Controllers
             return View("Secret");
         }
 
+        [Authorize(Roles = "Admin")]
+        public IActionResult SecretLevel()
+        {
+            return View("Secret");
+        }
+
 
         [AllowAnonymous]
         public IActionResult Authenticate()
