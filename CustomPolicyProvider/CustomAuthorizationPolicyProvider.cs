@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace AuthBasics.CustomPolicyProvider
 {
+    public class SecurityLevelAttribute : AuthorizeAttribute
+    {
+
+    }
     public static class DynamicPolicies
     {
         public static IEnumerable<string> Get()
