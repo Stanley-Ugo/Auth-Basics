@@ -60,6 +60,7 @@ namespace AuthBasics.CustomPolicyProvider
         {
             Level = level;
         }
+
     }
 
     public class SecurityLevelHandler : AuthorizationHandler<SecurityLevelRequirements>
