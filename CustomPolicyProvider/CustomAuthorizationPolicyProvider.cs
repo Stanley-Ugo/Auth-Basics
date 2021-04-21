@@ -73,6 +73,7 @@ namespace AuthBasics.CustomPolicyProvider
             {
                 context.Succeed(requirement);
             }
+
             return Task.CompletedTask;
         }
     }
