@@ -34,6 +34,7 @@ namespace AuthBasics.CustomPolicyProvider
             var parts = policyName.Split('.');
 
             var type = parts.First();
+
             var value = parts.Last();
 
             switch (type)
