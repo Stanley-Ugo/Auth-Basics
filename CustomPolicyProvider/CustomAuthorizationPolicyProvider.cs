@@ -23,6 +23,7 @@ namespace AuthBasics.CustomPolicyProvider
         }
 
         public const string SecurityLevel = "SecurityLevel";
+
         public const string Rank = "Rank";
     }
 
