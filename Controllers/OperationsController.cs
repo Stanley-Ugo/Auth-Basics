@@ -59,6 +59,7 @@ namespace AuthBasics.Controllers
         };
     }
 
+
     public static class CookieJarOperations
     {
         public static string Open = "Open";
