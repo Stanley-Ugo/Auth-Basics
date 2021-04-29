@@ -30,6 +30,7 @@ namespace AuthBasics.CustomPolicyProvider
 
     public static class DynamicAuthorizationPolicyFactory
     {
+
         public static AuthorizationPolicy Create(string policyName)
         {
             var parts = policyName.Split('.');
