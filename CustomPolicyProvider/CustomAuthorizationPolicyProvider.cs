@@ -16,6 +16,7 @@ namespace AuthBasics.CustomPolicyProvider
     }
     public static class DynamicPolicies
     {
+
         public static IEnumerable<string> Get()
         {
             yield return SecurityLevel;
