@@ -51,7 +51,6 @@ namespace AuthBasics.Controllers
         }
     }
 
-
     public static class CookieJarAuthOperations
     {
         public static OperationAuthorizationRequirement Open = new OperationAuthorizationRequirement
