@@ -17,7 +17,6 @@ namespace AuthBasics.Controllers
             _authorizationService = authorizationService;
         }
 
-
         public async Task<IActionResult> Open()
         {
             var cookieJar = new CookieJar(); //get cookie from db.
