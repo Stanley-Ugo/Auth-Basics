@@ -27,6 +27,7 @@ namespace AuthBasics.Controllers
         }
     }
 
+
     public class CookieJarAuthorizationHandler : AuthorizationHandler<OperationAuthorizationRequirement, CookieJar>
     {
         protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, OperationAuthorizationRequirement requirement, CookieJar cookieJar)
@@ -49,6 +50,7 @@ namespace AuthBasics.Controllers
             return Task.CompletedTask;
         }
     }
+
 
     public static class CookieJarAuthOperations
     {
