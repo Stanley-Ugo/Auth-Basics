@@ -67,7 +67,6 @@ namespace AuthBasics.Controllers
         public static string Look = "Look";
     }
 
-
     public class CookieJar
     {
         public string Name { get; set; }
