@@ -14,7 +14,6 @@ namespace AuthBasics.CustomPolicyProvider
             Policy = $"{DynamicPolicies.SecurityLevel}.{level}";
         }
     }
-
     public static class DynamicPolicies
     {
 
