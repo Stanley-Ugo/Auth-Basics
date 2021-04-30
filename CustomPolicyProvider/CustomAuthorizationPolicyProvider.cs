@@ -54,7 +54,6 @@ namespace AuthBasics.CustomPolicyProvider
         }
     }
 
-
     public class SecurityLevelRequirements : IAuthorizationRequirement
     {
         public int Level { get; }
