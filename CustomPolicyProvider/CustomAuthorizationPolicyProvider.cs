@@ -63,7 +63,6 @@ namespace AuthBasics.CustomPolicyProvider
         }
 
     }
-
     public class SecurityLevelHandler : AuthorizationHandler<SecurityLevelRequirements>
     {
         protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, SecurityLevelRequirements requirement)
