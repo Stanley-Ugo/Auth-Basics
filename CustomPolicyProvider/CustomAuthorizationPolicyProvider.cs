@@ -84,6 +84,7 @@ namespace AuthBasics.CustomPolicyProvider
         {
 
         }
+
         public override Task<AuthorizationPolicy> GetPolicyAsync(string policyName)
         {
             foreach (var customPolicy in DynamicPolicies.Get())
