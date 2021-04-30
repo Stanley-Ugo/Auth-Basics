@@ -27,7 +27,6 @@ namespace AuthBasics.CustomPolicyProvider
 
         public const string Rank = "Rank";
     }
-
     public static class DynamicAuthorizationPolicyFactory
     {
 
