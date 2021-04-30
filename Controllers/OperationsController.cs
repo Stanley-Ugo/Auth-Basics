@@ -49,6 +49,7 @@ namespace AuthBasics.Controllers
             return Task.CompletedTask;
         }
     }
+
     public static class CookieJarAuthOperations
     {
         public static OperationAuthorizationRequirement Open = new OperationAuthorizationRequirement
