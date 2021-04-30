@@ -77,6 +77,7 @@ namespace AuthBasics.CustomPolicyProvider
             return Task.CompletedTask;
         }
     }
+
     public class CustomAuthorizationPolicyProvider : DefaultAuthorizationPolicyProvider
     {
         public CustomAuthorizationPolicyProvider(IOptions<AuthorizationOptions> options) : base(options)
