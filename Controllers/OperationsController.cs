@@ -28,7 +28,6 @@ namespace AuthBasics.Controllers
     }
     public class CookieJarAuthorizationHandler : AuthorizationHandler<OperationAuthorizationRequirement, CookieJar>
     {
-
         protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, OperationAuthorizationRequirement requirement, CookieJar cookieJar)
         {
             if (requirement.Name == CookieJarOperations.Open)
