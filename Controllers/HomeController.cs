@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace AuthBasics.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : Controller 
     {
         public IActionResult Index()
         {
