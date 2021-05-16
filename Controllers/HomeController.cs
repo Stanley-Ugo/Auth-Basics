@@ -14,6 +14,7 @@ namespace AuthBasics.Controllers
     {
         public IActionResult Index()
         {
+
             return View();
         }
 
