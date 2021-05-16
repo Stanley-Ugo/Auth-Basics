@@ -28,6 +28,7 @@ namespace AuthBasics.Controllers
         [Authorize(Policy = "Claim.DOB")]
         public IActionResult SecretPolicy()
         {
+
             return View("Secret");
         }
 
