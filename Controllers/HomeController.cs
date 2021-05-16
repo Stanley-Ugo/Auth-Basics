@@ -35,6 +35,7 @@ namespace AuthBasics.Controllers
         [Authorize(Roles = "Admin")]
         public IActionResult SecretRole()
         {
+
             return View("Secret");
         }
 
