@@ -67,6 +67,7 @@ namespace AuthBasics.Controllers
                 new Claim("Grandma.Says", "Very nice boi."),
             };
 
+
             var licenseClaims = new List<Claim>()
             {
                 new Claim(ClaimTypes.Email, "Bob K Foo"),
