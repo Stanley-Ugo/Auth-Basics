@@ -86,6 +86,7 @@ namespace AuthBasics.Controllers
 
         public async Task<IActionResult> DoStuff([FromServices] IAuthorizationService authorizationService)
         {
+
             //we are doing stuff here
             var builder = new AuthorizationPolicyBuilder("Schema");
             var customPolicy = builder.RequireClaim("Hello").Build();
