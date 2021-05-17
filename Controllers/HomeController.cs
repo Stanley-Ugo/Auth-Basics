@@ -42,6 +42,7 @@ namespace AuthBasics.Controllers
         [SecurityLevel(5)]
         public IActionResult SecretLevel()
         {
+
             return View("Secret");
         }
 
