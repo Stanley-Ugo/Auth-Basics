@@ -101,7 +101,6 @@ namespace AuthBasics.Controllers
                 return View("Index");
             }
 
-
             return View("Index");
         } 
     }
