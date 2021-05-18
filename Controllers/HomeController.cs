@@ -97,7 +97,6 @@ namespace AuthBasics.Controllers
 
             if (authResult.Succeeded)
             {
-
                 return View("Index");
             }
 
