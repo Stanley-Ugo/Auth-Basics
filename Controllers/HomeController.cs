@@ -67,7 +67,7 @@ namespace AuthBasics.Controllers
             {
                 new Claim(ClaimTypes.Email, "Bob K Foo"),
                 new Claim("DrivingLicense", "A+."),
-            };
+            }
 
             var grandmaIdentity = new ClaimsIdentity(grandmaClaims, "Grandma Identity");
 
