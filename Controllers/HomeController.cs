@@ -71,7 +71,7 @@ namespace AuthBasics.Controllers
 
             var grandmaIdentity = new ClaimsIdentity(grandmaClaims, "Grandma Identity");
 
-            var licenseIdentity = new ClaimsIdentity(licenseClaims, "Government")
+            var licenseIdentity = new ClaimsIdentity(licenseClaims, "Government");
 
             var userPrincipal = new ClaimsPrincipal(new[] { grandmaIdentity, licenseIdentity });
 
