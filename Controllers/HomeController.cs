@@ -1,4 +1,4 @@
-﻿using AuthBasics.CustomPolicyProvider
+﻿using AuthBasics.CustomPolicyProvider;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
