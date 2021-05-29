@@ -20,7 +20,6 @@ namespace AuthBasics.Controllers
         [Authorize]
         public IActionResult Secret()
         {
-
             return View();
         }
 
