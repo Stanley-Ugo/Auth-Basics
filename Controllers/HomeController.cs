@@ -51,7 +51,6 @@ namespace AuthBasics.Controllers
         [AllowAnonymous]
         public IActionResult Authenticate()
         {
-
             var grandmaClaims = new List<Claim>()
             {
                 new Claim(ClaimTypes.Name, "bob"),
