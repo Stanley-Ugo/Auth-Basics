@@ -54,8 +54,8 @@ namespace AuthBasics.Controllers
             var grandmaClaims = new List<Claim>()
             {
                 new Claim(ClaimTypes.Name, "bob"),
-                new Claim(ClaimTypes.Email, "bob@fmail.com")
-                new Claim(ClaimTypes.DateOfBirth, "11/11/2000"),
+                new Claim(ClaimTypes.Email, "bob@fmail.com"),
+                new Claim(ClaimTypes.DateOfBirth, "11/11/2000")
                 new Claim(ClaimTypes.Role, "Admin"),
                 new Claim(DynamicPolicies.SecurityLevel, "7"),
                 new Claim("Grandma.Says", "Very nice boi."),
