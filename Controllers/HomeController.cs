@@ -64,7 +64,7 @@ namespace AuthBasics.Controllers
 
             var licenseClaims = new List<Claim>()
             {
-                new Claim(ClaimTypes.Email, "Bob K Foo")
+                new Claim(ClaimTypes.Email, "Bob K Foo"),
                 new Claim("DrivingLicense", "A+."),
             };
 
