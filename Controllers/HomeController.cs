@@ -58,7 +58,7 @@ namespace AuthBasics.Controllers
                 new Claim(ClaimTypes.DateOfBirth, "11/11/2000"),
                 new Claim(ClaimTypes.Role, "Admin"),
                 new Claim(DynamicPolicies.SecurityLevel, "7"),
-                new Claim("Grandma.Says", "Very nice boi.")
+                new Claim("Grandma.Says", "Very nice boi."),
             };
 
 
